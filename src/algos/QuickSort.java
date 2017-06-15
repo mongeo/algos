@@ -5,16 +5,16 @@ import java.util.Collections;
 
 public class QuickSort {
 
-	public ArrayList<Object> LomutoQS(ArrayList<Object> pL, int lo, int hi){
+	public ArrayList<Object> lomutoQS(ArrayList<Object> pL, int lo, int hi){
 		if (lo < hi){
-			int pIndex = LomutoPartition(pL, lo, hi);
-			LomutoQS(pL, lo, pIndex - 1);
-			LomutoQS(pL, pIndex + 1, hi);
+			int pIndex = lomutoPartition(pL, lo, hi);
+			lomutoQS(pL, lo, pIndex - 1);
+			lomutoQS(pL, pIndex + 1, hi);
 		}
 		return pL;
 	}
 	
-	private int LomutoPartition(ArrayList<Object> pL, int lo, int hi){
+	private int lomutoPartition(ArrayList<Object> pL, int lo, int hi){
 		Object pivotElement = pL.get(hi);  //x
 		int i = lo - 1;
 		for (int j = lo; j < hi; j++){
@@ -27,16 +27,16 @@ public class QuickSort {
 		return i + 1;
 	}
 	
-	public ArrayList<Object> LomutoQSMo3(ArrayList<Object> pL, int lo, int hi){
+	public ArrayList<Object> lomutoQSMo3(ArrayList<Object> pL, int lo, int hi){
 		if (lo < hi){
-			int pIndex = LomutoPartitionMo3(pL, lo, hi);
-			LomutoQS(pL, lo, pIndex - 1);
-			LomutoQS(pL, pIndex + 1, hi);
+			int pIndex = lomutoPartitionMo3(pL, lo, hi);
+			lomutoQS(pL, lo, pIndex - 1);
+			lomutoQS(pL, pIndex + 1, hi);
 		}
 		return pL;
 	}
 	
-	private int LomutoPartitionMo3(ArrayList<Object> pL, int lo, int hi){
+	private int lomutoPartitionMo3(ArrayList<Object> pL, int lo, int hi){
 		Object pivotElement = medianOf3(pL, lo, hi);  //x
 		int i = lo - 1;
 		for (int j = lo; j < hi; j++){

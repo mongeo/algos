@@ -17,7 +17,7 @@ public class Main {
 		System.out.println("| 1. Linear Search                |");
 		System.out.println("| 2. Binary Search                |");
 		System.out.println("| 3. Quick Sort                   |");
-		System.out.println("| 4. Selection Sort               |");
+		System.out.println("| 4. Merge Sort               |");
 		System.out.println("| 5. Insertion Sort               |");
 		System.out.println("| 6. Merge Sort                   |");
 		System.out.println("| 7. Heap Sort                    |");
@@ -60,15 +60,21 @@ public class Main {
 				//binary search requires the data to be sorted
 				ArrayList<Object> t = d.loadData(0, filename);
 				QuickSort qS = new QuickSort();
-				ArrayList<Object> l = qS.LomutoQSMo3(t, 0, t.size() - 1);
+				ArrayList<Object> l = qS.lomutoQSMo3(t, 0, t.size() - 1);
 				BinarySearch bS = new BinarySearch();
 				System.out.println(bS.search(l, searchTerm));
 				break;
 			} case 3: {
 				ArrayList<Object> l = d.loadData(4, filename);
 				QuickSort qS = new QuickSort();
-				System.out.println(qS.LomutoQSMo3(l, 0, l.size() - 1));
+				System.out.println(qS.lomutoQSMo3(l, 0, l.size() - 1));
 				break;
+			} case 4: {
+			ArrayList<Object> l = d.loadData(4, filename);
+			HeapSort hS = new HeapSort();
+			hS.buildMaxHeap(l);
+			System.out.println(hS.heapMax(l));
+			break;
 			}
 		}
 		scan.close();

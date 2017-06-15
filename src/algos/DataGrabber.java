@@ -10,7 +10,7 @@ import java.util.Set;
 public class DataGrabber {
 	//public ArrayList<Object> list = new ArrayList<>( );
 	private static final char DEFAULT_DELIMITER = ',';
-	private static final String DEFAULT_FILE = "C:/Users/geoff/Google Drive/workspace/data/bible.txt";
+	private static final String DEFAULT_FILE = "C:/Users/geoff/Documents/GitHub/algos/test_data/test.txt";
 
 	public ArrayList<Object> loadData(int option){
 		return loadData(option,DEFAULT_FILE);
